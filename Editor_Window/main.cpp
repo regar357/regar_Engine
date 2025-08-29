@@ -2,7 +2,7 @@
 //
 
 #include "framework.h"
-#include "main.h"
+#include "Editor_Window.h"
 
 #define MAX_LOADSTRING 100
 
