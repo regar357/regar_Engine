@@ -152,7 +152,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             //파란색 브러쉬 생성
             HBRUSH blueBrush = CreateSolidBrush(RGB(0, 0, 255));
-            // 파란색 브러쉬 DC에 선택 그리고 흰색브러쉬 반환
+            // 파란색 브러쉬 DC에 선택 그리고 흰색브러쉬 반환.
+            //선택해제하는 함수가 없기 때문에 SelectObject()로 서로 바꾸는 방식을 사용한다.
             HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, blueBrush);
 
             Rectangle(hdc, 100, 100, 200, 200);
